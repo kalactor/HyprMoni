@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+if ! command -v "os-prober" &> /dev/null; then
+	sudo pacman -S "os-prober" --noconfirm
+fi
+
+if [ -f /etc/default/grub ]; then
+	sudo sed -i "/^#GRUB_DISABLE_OS_PROBER=false/c\GRUB_DISABLE_OS_PROBER=false" /etc/default/grub
+	echo "Adding things done."
+fi
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
