@@ -23,5 +23,5 @@ else
     sudo sed -i "s|^Current=.*|Current=$THEME_NAME|" /usr/lib/sddm/sddm.conf.d/default.conf
 fi
 
-echo "Restarting SDDM..."
-sudo systemctl restart sddm
+# echo "Restarting SDDM..."
+# sudo systemctl restart sddm

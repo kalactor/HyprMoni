@@ -37,14 +37,14 @@ done
 
 # Install packages via pacman if available
 if [ -n "$packman_pkgs" ]; then
-    sudo pacman -S $packman_pkgs
+    sudo pacman -S --needed --noconfirm $packman_pkgs
 else
     echo "Pacman programs: No packages to install."
 fi
 
 # Install packages via yay if available
 if [ -n "$yay_pkgs" ]; then
-    yay -S $yay_pkgs
+    yay -S --needed --noconfirm $yay_pkgs
 else
     echo "Yay programs: No packages to install."
 fi

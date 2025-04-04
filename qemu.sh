@@ -3,7 +3,7 @@
 sudo pacman -Syu --noconfirm
 
 if ! command -v "yay" &> /dev/null; then
-	echo "yay is not installled, \n Installing yay..."
+	echo -e "yay is not installed, \n Installing yay..."
 	./yay.sh
 else
 	echo "yay is already installed :)"
@@ -11,10 +11,9 @@ fi
 
 sudo pacman -S --needed --noconfirm qemu-full qemu-img libvirt virt-install virt-manager virt-viewer edk2-ovmf swtpm guestfs-tools libosinfo dnsmasq
 
-yay -S tuned --needed --noconfirm
+yay -S --needed --noconfirm tuned
 
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
+sudo systemctl enable --now libvirtd.service
 
 sudo systemctl enable --now tuned
 sudo tuned-adm profile virtual-host

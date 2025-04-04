@@ -5,9 +5,6 @@ set -e
 scrDir="$(dirname "$(realpath "$0")")"
 source "${scrDir}/global_fun.sh"
 
-# Exit immediately if a command exits with a non-zero status
-set -e
-
 if package_installed "yay" &> /dev/null; then
     echo -e "${GREEN}yay is already installed!${NC}"
     exit 0

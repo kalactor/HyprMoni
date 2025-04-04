@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 if ! command -v "os-prober" &> /dev/null; then
-	sudo pacman -S "os-prober" --noconfirm
+	sudo pacman -S --noconfirm --needed "os-prober"
 fi
 
 if [ -f /etc/default/grub ]; then
