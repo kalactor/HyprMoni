@@ -20,7 +20,7 @@ echo -e "${YELLOW}Installing dependencies...${NC}"
 sudo pacman -S --needed --noconfirm git base-devel
 
 echo -e "${YELLOW}Cloning yay repository...${NC}"
-git clone https://aur.archlinux.org/yay.git || { echo "Error: Failed to clone yay repository"; exit 1; }
+git clone https://aur.archlinux.org/yay.git || { echo -e "${RED}Error: Failed to clone yay repository${NC}"; exit 1; }
 cd yay
 makepkg -si --noconfirm
 cd ..

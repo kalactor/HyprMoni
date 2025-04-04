@@ -22,6 +22,3 @@ if [ ! -d "$SDDM_THEME_DIR/$THEME_NAME" ]; then
 else
     sudo sed -i "s|^Current=.*|Current=$THEME_NAME|" /usr/lib/sddm/sddm.conf.d/default.conf
 fi
-
-# echo "Restarting SDDM..."
-# sudo systemctl restart sddm
