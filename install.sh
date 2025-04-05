@@ -37,9 +37,9 @@ echo -e "${YELLOW}Applying system configurations...${NC}"
 ./system_ctl.sh
 ./sddm_theme.sh
 
-echo -e "${YELLOW}Installing additional packages...${NC}"
+echo -e "${YELLOW}Installing config files...${NC}"
 if ./install_config.sh; then
-    echo -e "${GREEN}Package installation was successful${NC}"
+    echo -e "${GREEN}Configuration installation was successful${NC}"
 else
     echo -e "${RED}Something went wrong :(${NC}"
     exit 1
