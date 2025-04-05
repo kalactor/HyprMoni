@@ -13,4 +13,4 @@ hyprctl hyprpaper reload ,"$WALLPAPER"
 sed -i "s|^\$wall_path = .*|\$wall_path = $LOCK_WALLPAPER|" ~/.config/hypr/hyprlock.conf
 
 sed -i "s|^preload = .*|preload = $WALLPAPER|" ~/.config/hypr/hyprpaper.conf
-sed -i "s|^wallpaper = .*|wallpaper = $WALLPAPER|" ~/.config/hypr/hyprpaper.conf
+sed -i "s|^wallpaper = , .*|wallpaper = , $WALLPAPER|" ~/.config/hypr/hyprpaper.conf
