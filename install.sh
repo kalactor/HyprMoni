@@ -37,6 +37,14 @@ echo -e "${YELLOW}Applying system configurations...${NC}"
 ./system_ctl.sh
 ./sddm_theme.sh
 
+echo -e "${YELLOW}Installing additional packages...${NC}"
+if ./install_config.sh; then
+    echo -e "${GREEN}Package installation was successful${NC}"
+else
+    echo -e "${RED}Something went wrong :(${NC}"
+    exit 1
+fi
+
 echo -e "${YELLOW}Setting up dual boot...${NC}"
 if ./dual_boot.sh; then
     echo -e "${GREEN}Dual boot configuration successful!${NC}"
