@@ -135,7 +135,8 @@
       ]
     },
     "scroll-step": 2,
-    "on-click": "pavucontrol",
+    "on-click": "sh -c 'pactl set-sink-mute $(pactl get-default-sink) toggle'",
+    "on-click-right": "pavucontrol",
     "ignored-sinks": [
       "Easy Effects Sink"
     ]
