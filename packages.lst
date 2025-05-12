@@ -53,8 +53,9 @@ sassc
 # --------------------------------------------------- // Applications
 firefox                                                # browser
 kitty                                                  # terminal
-dolphin                                                # kde file manager       
-ark                                                    # kde file archiver
+nemo                                                   # file manager  
+nemo-preview                                           # quick file previewer for nemo      
+nemo-fileroller                                        # File archiver extension for Nemo 
 vim                                                    # text file editor
 code                                                   # ide text editor
 fastfetch                                              # system information fetch tool
@@ -65,6 +66,7 @@ otf-font-awesome
 ttf-liberation
 noto-fonts
 noto-fonts-emoji
+otf-apple-fonts                                         # for waybar
 
 # --------------------------------------------------- // theming tools
 nwg-look                                               # gtk configuration tool
