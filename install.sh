@@ -21,7 +21,7 @@ else
     exit 1
 fi
 
-echo -e "${YELLOW}Installing additional packages...${NC}"
+echo -e "${YELLOW}Installing required packages...${NC}"
 if ./install_packages.sh; then
     echo -e "${GREEN}Package installation was successful${NC}"
 else
@@ -29,9 +29,13 @@ else
     exit 1
 fi
 
+# Install local fonts without package manager
+sudo unzip -q -j "$scrDir/sources/higher-jump.zip" "Higher Jump.ttf" -d /usr/share/fonts/TTF/
+fc-cache
+
 # Set Dolphin as the default file explorer
-echo -e "${YELLOW}Setting Dolphin as the default file manager...${NC}"
-xdg-mime default org.kde.dolphin.desktop inode/directory
+echo -e "${YELLOW}Setting Nemo as the default file manager...${NC}"
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 
 echo -e "${YELLOW}Applying system configurations...${NC}"
 ./system_ctl.sh

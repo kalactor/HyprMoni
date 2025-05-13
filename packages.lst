@@ -39,6 +39,7 @@ wlogout                                                # logout menu
 cliphist                                               # clipboard manager
 
 # --------------------------------------------------- // Dependencies
+unzip                                                  # for zip file handling
 jq                                                     # for json processing
 parallel                                               # for parallel processing
 imagemagick                                            # for image processing

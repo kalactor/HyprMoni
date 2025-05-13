@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -e  # Exit on error
+set -e
 
 scrDir="$(dirname "$(realpath "$0")")"
 
@@ -21,4 +21,4 @@ tar -xf "$scrDir/sources/WhiteSur-Dark-solid.tar.xz" -C "$THEME_DIR"
 tar -xf "$scrDir/sources/WhiteSur-Light-solid.tar.xz" -C "$THEME_DIR"
 
 # Copy configuration files
-cp -r "$scrDir/config/hypr" "$scrDir/config/kitty" "$scrDir/config/wlogout" "$CONFIG_DIR"
+cp -r "$scrDir/config/hypr" "$scrDir/config/kitty" "$scrDir/config/waybar" "$scrDir/config/wlogout" "$CONFIG_DIR"
